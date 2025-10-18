@@ -10,7 +10,6 @@ from selenium.webdriver.common.by import By
 import locale
 import time
 import webbrowser as wb
-from selenium.webdriver.common.action_chains import ActionChains
 import smtplib
 import email.message
 from email.mime.multipart import MIMEMultipart
