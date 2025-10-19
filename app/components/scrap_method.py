@@ -48,7 +48,6 @@ class ScrapPrices():
         
         self.driver.get(url)
         
-        
         time.sleep(5)
             # Fecha o banner, se existir
         self.driver.find_element(By.XPATH, '//*[@id="bannerPop"]/div/div/button/span').click() 
@@ -61,7 +60,11 @@ class ScrapPrices():
         element_cash = self.driver.find_element(By.ID,TERABYTE_AVISTA_ID)
         cash = element_cash.text
         time.sleep(2)
-        element_installment = self.driver.find_element(By.XPATH,TERABYTE_PARCELADO_XPATH)
-        installment = element_installment.text
-
+        try:
+            element_installment = self.driver.find_element(By.XPATH,TERABYTE_PARCELADO_XPATH)
+            installment = element_installment.text
+        except:
+            element_installment = self.driver.find_element(By.XPATH,'/html/body/div[4]/div[2]/div/div/div[3]/div/div/div[11]/div[2]/div[3]/div[1]/p/span[1]')
+            installment = element_installment.text
+            
         return cash, installment,title
