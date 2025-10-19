@@ -3,7 +3,7 @@ CONSTANTS MUDULE
 
 """
  ##KABUM PATH
-KABUM_TITLE_PRODUCT_XPATH = '/html/body/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[4]/div[2]/div[2]/div[2]/div[1]/h2[1]'
+KABUM_TITLE_PRODUCT_XPATH = '/html/body/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/h1'
 KABUM_AVISTA_CSS_SELECTOR = '.text-black-600.text-xs.font-normal.line-through'
 KABUM_PARCELADO_CSS_SELECTOR = '.text-4xl.text-secondary-500.font-bold.transition-all.duration-500'
 
