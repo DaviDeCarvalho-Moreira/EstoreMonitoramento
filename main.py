@@ -14,22 +14,29 @@ FONTE_PICHAU = 'https://www.pichau.com.br/fonte-cooler-master-mwe-gold-650-v3-65
 PROCESSADOR_TERABYTE = 'https://www.terabyteshop.com.br/produto/25440/processador-amd-ryzen-3-4100-38ghz-40ghz-turbo-4-cores-8-threads-cooler-wraith-stealth-am4-100-100000510box'
 
 
+PS_KABUM = 'https://www.kabum.com.br/produto/922662/console-sony-playstation-5-edicao-digital-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-1000050614'
+NINTENDO_KABUM = 'https://www.kabum.com.br/produto/779788/console-nintendo-switch-2-jogo-digital-mario-kart-world'
 
 def main():
     
     SP = ScrapPrices()
     
    
-    # a = SP.kabum_scrap(MONITOR_KABUM)
+    a = SP.kabum_scrap(MONITOR_KABUM)
     # b = SP.pichau_scrap(GABINETE_PICHAU)
     # c = SP.terabyte_scrap(VIDEO)
-    # print(a,b,c)
-    
-    # d = SP.kabum_scrap(MOUSE_KABUM)
-    # e = SP.pichau_scrap(FONTE_PICHAU)
-    f = SP.terabyte_scrap(PROCESSADOR_TERABYTE)
-    print(f)
 
+    
+    d = SP.kabum_scrap(MOUSE_KABUM)
+    # e = SP.pichau_scrap(FONTE_PICHAU)
+    # f = SP.terabyte_scrap(PROCESSADOR_TERABYTE)
+    
+    c = SP.kabum_scrap(PS_KABUM)
+    
+    d = SP.kabum_scrap(NINTENDO_KABUM)
+
+
+    print(a,d,c,d)
 
 
 if __name__ == "__main__":

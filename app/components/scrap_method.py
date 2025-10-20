@@ -28,7 +28,6 @@ class ScrapPrices():
         element_installment = self.driver.find_element(By.CSS_SELECTOR,KABUM_PARCELADO_CSS_SELECTOR)
         installment = element_installment.text
         
-        
         return cash,installment,title
     
     def pichau_scrap(self,url):
@@ -43,23 +42,25 @@ class ScrapPrices():
     
         return cash,installment,title
     
-
     def terabyte_scrap(self,url):
         
         self.driver.get(url)
         
-        time.sleep(5)
-            # Fecha o banner, se existir
-        self.driver.find_element(By.XPATH, '//*[@id="bannerPop"]/div/div/button/span').click() 
-        time.sleep(5)
+        try:
+            time.sleep(5)
+                # Fecha o banner, se existir
+            self.driver.find_element(By.XPATH, '//*[@id="bannerPop"]/div/div/button/span').click() 
+            time.sleep(5)
+        except:
+            pass
         
-  
         product_title = self.driver.find_element(By.XPATH,TERABYTE_TITLE_PRODUCT_XPATH)
         title = product_title.text
         time.sleep(2)
         element_cash = self.driver.find_element(By.ID,TERABYTE_AVISTA_ID)
         cash = element_cash.text
         time.sleep(2)
+        
         try:
             element_installment = self.driver.find_element(By.XPATH,TERABYTE_PARCELADO_XPATH)
             installment = element_installment.text
