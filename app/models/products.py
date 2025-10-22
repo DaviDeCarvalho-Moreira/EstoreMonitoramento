@@ -15,12 +15,12 @@ class Product(Base):
     insert_date: Mapped[datetime] = mapped_column(DateTime,default=datetime.now)
     product_name: Mapped[str] = mapped_column(String(200))
     product_url: Mapped[str] = mapped_column(String(200))
-    store_id: Mapped[int] = mapped_column(Integer,ForeignKey("store.user_id"))
+    store_id: Mapped[int] = mapped_column(Integer,ForeignKey("store.store_id"))
     
     store: Mapped["Store"] = relationship(back_populates="products")
     
-    products: Mapped[List["Price"]] = relationship(
-        back_populates="price",
+    prices: Mapped[List["Price"]] = relationship(
+        back_populates="product",
         cascade="all, delete-orphan"
     )
     

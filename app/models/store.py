@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 class Store(Base):
     __tablename__ = "store"
     
-    user_id:Mapped[int] = mapped_column(Integer,primary_key=True)
+    store_id:Mapped[int] = mapped_column(Integer,primary_key=True)
     insert_date: Mapped[datetime] = mapped_column(DateTime,default=datetime.now)
     store_name: Mapped[str] = mapped_column(String(100))
     
