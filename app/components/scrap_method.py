@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from app.database.db_insert import db_insert
+from app.database.db_manipulation import db_insert
 from app.database.data_treatment import price_float
 import time
 from app.components.constants import KABUM_AVISTA_CSS_SELECTOR,KABUM_PARCELADO_CSS_SELECTOR,PICHAU_AVISTA_CLASS_NAME, PICHAU_PARCELADO_CLASS_NAME,TERABYTE_AVISTA_ID,TERABYTE_PARCELADO_XPATH, KABUM_TITLE_PRODUCT_XPATH,PICHAU_TITLE_PRODUCT_CSS,TERABYTE_TITLE_PRODUCT_XPATH
