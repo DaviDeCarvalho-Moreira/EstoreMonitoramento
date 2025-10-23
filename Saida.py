@@ -140,8 +140,8 @@ listaParc('Parc_Monitor',monitorParcelado)
 listaParc('Parc_Mae',maeParcelado)
 
 
-davi  = 'davicarvalho425@gmail.com'
-senha = 'aufd ohmd ikku vxhv'
+usuario  = ''
+senha = ''
 
 detalhamento = pd.read_excel('DETALHAMENTO.xlsx')
 detalhamento = detalhamento.set_index('HARD')
