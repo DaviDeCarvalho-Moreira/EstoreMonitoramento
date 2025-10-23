@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.database.Base import Base
-from app.models.price import Price
 from app.models.products import Product
 from app.models.store import Store
 import sqlite3
